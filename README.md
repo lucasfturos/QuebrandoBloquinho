@@ -10,3 +10,8 @@
 ```
 zig build run
 ```
+
+## Credits
+
+[Paid Zig Stream](https://youtu.be/eIX9zER9vjY)
+

@@ -122,8 +122,13 @@ fn update(dt: f32) void {
         proj_p.x = proj_nx;
 
         var proj_ny = proj_p.y + proj_pd.y * PROJ_SPEED * dt;
-        var cond_y = proj_ny < 0 or proj_ny + PROJ_SIZE > WINDOW_HEIGHT or c.SDL_HasIntersection(&proj_rect(proj_p.x, proj_ny), &bar_rect()) != 0;
-
+        var cond_y = proj_ny < 0 or proj_ny + PROJ_SIZE > WINDOW_HEIGHT;
+        if (!cond_y) {
+            cond_y = cond_y or c.SDL_HasIntersection(&proj_rect(proj_p.x, proj_ny), &bar_rect()) != 0;
+            if (cond_y and bar_d.x != 0) {
+                proj_pd.x = bar_d.x;
+            }
+        }
         for (&targets_pool) |*target| {
             if (cond_y) {
                 break;
