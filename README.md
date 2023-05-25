@@ -13,5 +13,5 @@ zig build run
 
 ## Credits
 
-Aprendi bastante no vídeo, acessem e façam também o projeto como exercício:
-[Paid Zig Stream](https://youtu.be/eIX9zER9vjY)
+Aprendi bastante no vídeo [Paid Zig Stream](https://youtu.be/eIX9zER9vjY)
+, acessem o vídeo e façam também o projeto como exercício e melhore para algo mais elaborado.
